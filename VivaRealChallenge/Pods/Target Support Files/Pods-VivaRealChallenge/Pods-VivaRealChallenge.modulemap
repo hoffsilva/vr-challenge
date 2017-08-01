@@ -1,0 +1,6 @@
+framework module Pods_VivaRealChallenge {
+  umbrella header "Pods-VivaRealChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
