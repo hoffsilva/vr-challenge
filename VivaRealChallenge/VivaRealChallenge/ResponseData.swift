@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-public final class ResponseData: NSCoding {
+class ResponseData: Model {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
@@ -23,18 +23,17 @@ public final class ResponseData: NSCoding {
   public var message: String?
 
   // MARK: SwiftyJSON Initializers
-  /// Initiates the instance based on the object.
-  ///
-  /// - parameter object: The object of either Dictionary or Array kind that was passed.
-  /// - returns: An initialized instance of the class.
-  public convenience init(object: Any) {
-    self.init(json: JSON(object))
-  }
+    
+
+    override init() {
+        super.init()
+    }
 
   /// Initiates the instance based on the JSON that was passed.
   ///
   /// - parameter json: JSON object from SwiftyJSON.
-  public required init(json: JSON) {
+  required init(json: JSON) {
+    super.init(json: json)
     error = json[SerializationKeys.error].string
     status = json[SerializationKeys.status].int
     message = json[SerializationKeys.message].string
@@ -49,19 +48,6 @@ public final class ResponseData: NSCoding {
     if let value = status { dictionary[SerializationKeys.status] = value }
     if let value = message { dictionary[SerializationKeys.message] = value }
     return dictionary
-  }
-
-  // MARK: NSCoding Protocol
-  required public init(coder aDecoder: NSCoder) {
-    self.error = aDecoder.decodeObject(forKey: SerializationKeys.error) as? String
-    self.status = aDecoder.decodeObject(forKey: SerializationKeys.status) as? Int
-    self.message = aDecoder.decodeObject(forKey: SerializationKeys.message) as? String
-  }
-
-  public func encode(with aCoder: NSCoder) {
-    aCoder.encode(error, forKey: SerializationKeys.error)
-    aCoder.encode(status, forKey: SerializationKeys.status)
-    aCoder.encode(message, forKey: SerializationKeys.message)
   }
 
 }

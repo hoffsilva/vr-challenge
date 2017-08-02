@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyJSON
 
-public final class Top: NSCoding {
+class Top: Model {
 
   // MARK: Declaration for string constants to be used to decode and also serialize.
   private struct SerializationKeys {
@@ -30,11 +30,16 @@ public final class Top: NSCoding {
   public convenience init(object: Any) {
     self.init(json: JSON(object))
   }
+    
+    override init() {
+        super.init()
+    }
 
   /// Initiates the instance based on the JSON that was passed.
   ///
   /// - parameter json: JSON object from SwiftyJSON.
   public required init(json: JSON) {
+    super.init(json: json)
     channels = json[SerializationKeys.channels].int
     game = Game(json: json[SerializationKeys.game])
     viewers = json[SerializationKeys.viewers].int
@@ -49,19 +54,6 @@ public final class Top: NSCoding {
     if let value = game { dictionary[SerializationKeys.game] = value.dictionaryRepresentation() }
     if let value = viewers { dictionary[SerializationKeys.viewers] = value }
     return dictionary
-  }
-
-  // MARK: NSCoding Protocol
-  required public init(coder aDecoder: NSCoder) {
-    self.channels = aDecoder.decodeObject(forKey: SerializationKeys.channels) as? Int
-    self.game = aDecoder.decodeObject(forKey: SerializationKeys.game) as? Game
-    self.viewers = aDecoder.decodeObject(forKey: SerializationKeys.viewers) as? Int
-  }
-
-  public func encode(with aCoder: NSCoder) {
-    aCoder.encode(channels, forKey: SerializationKeys.channels)
-    aCoder.encode(game, forKey: SerializationKeys.game)
-    aCoder.encode(viewers, forKey: SerializationKeys.viewers)
   }
 
 }
