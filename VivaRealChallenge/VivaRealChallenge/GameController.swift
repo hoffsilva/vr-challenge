@@ -20,9 +20,17 @@ class GameController {
     var arrayOfGames = [Game]()
     
     func getGames(quantity: Int?) {
-        let qty = quantity ?? 
-        Service.shared.fetch(Game.self, requestLink: .getGame, parameters: nil) { (response) in
-            
+        let qty = quantity ?? 50
+        Service.shared.fetch(Game.self, requestLink: .getGame, parameters: ["quantity" : qty]) { (response) in
+            //sprint(response)
+            if let error = Service.verifyResult(response) {
+                self.delegate?.showError(message: error.description)
+                return
+            }
+            for game in (response as? [Game])!{
+                self.arrayOfGames.append(game)
+            }
+            self.delegate?.loadGameSuccesfuly()
         }
     }
     

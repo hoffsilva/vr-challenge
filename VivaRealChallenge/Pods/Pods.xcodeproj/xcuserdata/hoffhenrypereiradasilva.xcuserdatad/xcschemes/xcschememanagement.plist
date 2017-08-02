@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FCAlertView-FCAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FCAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-VivaRealChallenge.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +57,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>010E523750AFFEFD4BA1939FAF91DFEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1613271357771814C71601D90B787D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1B33EEFA71EEF6C80F4500DE2799DF17</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F4DED4AE41058D53372C3B8DE5A0C81</key>
+		<key>3AFF1197793773B5399043888844C497</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54DCA282B7FA6139475173648A4F0B41</key>
+		<key>4A3E211676B243619B026D147D272253</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0579B1B34F9676D13EC9A5113A07DD6</key>
+		<key>B320BEA0CBB0D83530273EE989509BBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD550B6795A472AB771E3B4EDDA667B4</key>
+		<key>D6E1EE47929D4AFE7D68EA8923C7DF3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6A55FA90920E7F131229AD535AF53EF</key>
+		<key>D846223365BAD7CA483638E25DBFCB6A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF1ABE20DAA23760FBF0359740C1F0B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

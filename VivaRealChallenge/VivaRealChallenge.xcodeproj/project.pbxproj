@@ -26,6 +26,30 @@
 		437D4BB21F31521E001BA23E /* EnvironmentLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BB01F31521E001BA23E /* EnvironmentLinks.swift */; };
 		437D4BB31F31521E001BA23E /* EnvironmentLinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BB11F31521E001BA23E /* EnvironmentLinks.plist */; };
 		437D4BB51F3159F1001BA23E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BB41F3159F1001BA23E /* FileManager.swift */; };
+		437D4BB71F317517001BA23E /* GameCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BB61F317517001BA23E /* GameCollectionView.swift */; };
+		437D4BCF1F317CE5001BA23E /* ac3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BB91F317CE5001BA23E /* ac3.jpg */; };
+		437D4BD01F317CE5001BA23E /* bs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBA1F317CE5001BA23E /* bs.jpg */; };
+		437D4BD11F317CE5001BA23E /* ac2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBB1F317CE5001BA23E /* ac2.jpg */; };
+		437D4BD21F317CE5001BA23E /* tf3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBC1F317CE5001BA23E /* tf3.jpg */; };
+		437D4BD31F317CE5001BA23E /* tf2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBD1F317CE5001BA23E /* tf2.jpg */; };
+		437D4BD41F317CE5001BA23E /* halo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBE1F317CE5001BA23E /* halo1.jpg */; };
+		437D4BD51F317CE5001BA23E /* cs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BBF1F317CE5001BA23E /* cs.jpg */; };
+		437D4BD61F317CE5001BA23E /* ts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC01F317CE5001BA23E /* ts.jpg */; };
+		437D4BD71F317CE5001BA23E /* tf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC11F317CE5001BA23E /* tf.jpg */; };
+		437D4BD81F317CE5001BA23E /* tb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC21F317CE5001BA23E /* tb.jpg */; };
+		437D4BD91F317CE5001BA23E /* mine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC31F317CE5001BA23E /* mine.jpg */; };
+		437D4BDA1F317CE5001BA23E /* metro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC41F317CE5001BA23E /* metro.jpg */; };
+		437D4BDB1F317CE5001BA23E /* halob.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC51F317CE5001BA23E /* halob.jpg */; };
+		437D4BDC1F317CE5001BA23E /* ac.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC61F317CE5001BA23E /* ac.jpg */; };
+		437D4BDD1F317CE5001BA23E /* fc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC71F317CE5001BA23E /* fc.jpg */; };
+		437D4BDE1F317CE5001BA23E /* wd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC81F317CE5001BA23E /* wd.jpg */; };
+		437D4BDF1F317CE5001BA23E /* hitman.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BC91F317CE5001BA23E /* hitman.jpg */; };
+		437D4BE01F317CE5001BA23E /* gta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCA1F317CE5001BA23E /* gta.jpg */; };
+		437D4BE11F317CE5001BA23E /* ds.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCB1F317CE5001BA23E /* ds.jpg */; };
+		437D4BE21F317CE5001BA23E /* halo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCC1F317CE5001BA23E /* halo.jpg */; };
+		437D4BE31F317CE5001BA23E /* battlefield.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCD1F317CE5001BA23E /* battlefield.jpg */; };
+		437D4BE41F317CE5001BA23E /* mk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCE1F317CE5001BA23E /* mk.jpg */; };
+		437D4BE61F3181B6001BA23E /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */; };
 		9FDE5FC7E9BBD6A3ECBBE54D /* Pods_VivaRealChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +87,30 @@
 		437D4BB01F31521E001BA23E /* EnvironmentLinks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentLinks.swift; sourceTree = "<group>"; };
 		437D4BB11F31521E001BA23E /* EnvironmentLinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnvironmentLinks.plist; sourceTree = "<group>"; };
 		437D4BB41F3159F1001BA23E /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		437D4BB61F317517001BA23E /* GameCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionView.swift; sourceTree = "<group>"; };
+		437D4BB91F317CE5001BA23E /* ac3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ac3.jpg; sourceTree = "<group>"; };
+		437D4BBA1F317CE5001BA23E /* bs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bs.jpg; sourceTree = "<group>"; };
+		437D4BBB1F317CE5001BA23E /* ac2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ac2.jpg; sourceTree = "<group>"; };
+		437D4BBC1F317CE5001BA23E /* tf3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tf3.jpg; sourceTree = "<group>"; };
+		437D4BBD1F317CE5001BA23E /* tf2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tf2.jpg; sourceTree = "<group>"; };
+		437D4BBE1F317CE5001BA23E /* halo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halo1.jpg; sourceTree = "<group>"; };
+		437D4BBF1F317CE5001BA23E /* cs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cs.jpg; sourceTree = "<group>"; };
+		437D4BC01F317CE5001BA23E /* ts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ts.jpg; sourceTree = "<group>"; };
+		437D4BC11F317CE5001BA23E /* tf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tf.jpg; sourceTree = "<group>"; };
+		437D4BC21F317CE5001BA23E /* tb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tb.jpg; sourceTree = "<group>"; };
+		437D4BC31F317CE5001BA23E /* mine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mine.jpg; sourceTree = "<group>"; };
+		437D4BC41F317CE5001BA23E /* metro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metro.jpg; sourceTree = "<group>"; };
+		437D4BC51F317CE5001BA23E /* halob.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halob.jpg; sourceTree = "<group>"; };
+		437D4BC61F317CE5001BA23E /* ac.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ac.jpg; sourceTree = "<group>"; };
+		437D4BC71F317CE5001BA23E /* fc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fc.jpg; sourceTree = "<group>"; };
+		437D4BC81F317CE5001BA23E /* wd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wd.jpg; sourceTree = "<group>"; };
+		437D4BC91F317CE5001BA23E /* hitman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hitman.jpg; sourceTree = "<group>"; };
+		437D4BCA1F317CE5001BA23E /* gta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gta.jpg; sourceTree = "<group>"; };
+		437D4BCB1F317CE5001BA23E /* ds.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ds.jpg; sourceTree = "<group>"; };
+		437D4BCC1F317CE5001BA23E /* halo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = halo.jpg; sourceTree = "<group>"; };
+		437D4BCD1F317CE5001BA23E /* battlefield.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = battlefield.jpg; sourceTree = "<group>"; };
+		437D4BCE1F317CE5001BA23E /* mk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mk.jpg; sourceTree = "<group>"; };
+		437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		58D541F65DD1CAB30B15006D /* Pods_VivaRealChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6F2E019EB4089FE5B64D /* Pods-VivaRealChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaRealChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivaRealChallenge/Pods-VivaRealChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +170,7 @@
 		437D4B781F3113C5001BA23E /* VivaRealChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				437D4BB81F317BC7001BA23E /* images */,
 				437D4B9B1F311906001BA23E /* View */,
 				437D4B9A1F3118FB001BA23E /* Controller */,
 				437D4B991F3118EC001BA23E /* Model */,
@@ -173,8 +222,39 @@
 		437D4B9B1F311906001BA23E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				437D4BB61F317517001BA23E /* GameCollectionView.swift */,
+				437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		437D4BB81F317BC7001BA23E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				437D4BB91F317CE5001BA23E /* ac3.jpg */,
+				437D4BBA1F317CE5001BA23E /* bs.jpg */,
+				437D4BBB1F317CE5001BA23E /* ac2.jpg */,
+				437D4BBC1F317CE5001BA23E /* tf3.jpg */,
+				437D4BBD1F317CE5001BA23E /* tf2.jpg */,
+				437D4BBE1F317CE5001BA23E /* halo1.jpg */,
+				437D4BBF1F317CE5001BA23E /* cs.jpg */,
+				437D4BC01F317CE5001BA23E /* ts.jpg */,
+				437D4BC11F317CE5001BA23E /* tf.jpg */,
+				437D4BC21F317CE5001BA23E /* tb.jpg */,
+				437D4BC31F317CE5001BA23E /* mine.jpg */,
+				437D4BC41F317CE5001BA23E /* metro.jpg */,
+				437D4BC51F317CE5001BA23E /* halob.jpg */,
+				437D4BC61F317CE5001BA23E /* ac.jpg */,
+				437D4BC71F317CE5001BA23E /* fc.jpg */,
+				437D4BC81F317CE5001BA23E /* wd.jpg */,
+				437D4BC91F317CE5001BA23E /* hitman.jpg */,
+				437D4BCA1F317CE5001BA23E /* gta.jpg */,
+				437D4BCB1F317CE5001BA23E /* ds.jpg */,
+				437D4BCC1F317CE5001BA23E /* halo.jpg */,
+				437D4BCD1F317CE5001BA23E /* battlefield.jpg */,
+				437D4BCE1F317CE5001BA23E /* mk.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		BA67D6A659159F3E6A68C0B1 /* Pods */ = {
@@ -279,11 +359,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437D4BD91F317CE5001BA23E /* mine.jpg in Resources */,
+				437D4BE21F317CE5001BA23E /* halo.jpg in Resources */,
+				437D4BD81F317CE5001BA23E /* tb.jpg in Resources */,
+				437D4BD61F317CE5001BA23E /* ts.jpg in Resources */,
+				437D4BDC1F317CE5001BA23E /* ac.jpg in Resources */,
+				437D4BE41F317CE5001BA23E /* mk.jpg in Resources */,
 				437D4B841F3113C5001BA23E /* LaunchScreen.storyboard in Resources */,
 				437D4BB31F31521E001BA23E /* EnvironmentLinks.plist in Resources */,
+				437D4BD71F317CE5001BA23E /* tf.jpg in Resources */,
+				437D4BE01F317CE5001BA23E /* gta.jpg in Resources */,
+				437D4BD41F317CE5001BA23E /* halo1.jpg in Resources */,
+				437D4BDF1F317CE5001BA23E /* hitman.jpg in Resources */,
 				437D4B811F3113C5001BA23E /* Assets.xcassets in Resources */,
+				437D4BDB1F317CE5001BA23E /* halob.jpg in Resources */,
+				437D4BE11F317CE5001BA23E /* ds.jpg in Resources */,
+				437D4BE31F317CE5001BA23E /* battlefield.jpg in Resources */,
+				437D4BDD1F317CE5001BA23E /* fc.jpg in Resources */,
+				437D4BD01F317CE5001BA23E /* bs.jpg in Resources */,
+				437D4BD11F317CE5001BA23E /* ac2.jpg in Resources */,
+				437D4BDE1F317CE5001BA23E /* wd.jpg in Resources */,
+				437D4BCF1F317CE5001BA23E /* ac3.jpg in Resources */,
+				437D4BD21F317CE5001BA23E /* tf3.jpg in Resources */,
 				437D4BA91F314595001BA23E /* RequestLinks.plist in Resources */,
+				437D4BDA1F317CE5001BA23E /* metro.jpg in Resources */,
+				437D4BD31F317CE5001BA23E /* tf2.jpg in Resources */,
 				437D4B7F1F3113C5001BA23E /* Main.storyboard in Resources */,
+				437D4BD51F317CE5001BA23E /* cs.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +498,7 @@
 			files = (
 				437D4BA51F3143F9001BA23E /* Session.swift in Sources */,
 				437D4B7C1F3113C5001BA23E /* ViewController.swift in Sources */,
+				437D4BB71F317517001BA23E /* GameCollectionView.swift in Sources */,
 				437D4BA31F314052001BA23E /* Connection.swift in Sources */,
 				437D4BB21F31521E001BA23E /* EnvironmentLinks.swift in Sources */,
 				437D4B9E1F31222D001BA23E /* Game.swift in Sources */,
@@ -403,6 +506,7 @@
 				437D4BA11F3122A9001BA23E /* Top.swift in Sources */,
 				437D4B9F1F31222D001BA23E /* ResponseData.swift in Sources */,
 				437D4BB51F3159F1001BA23E /* FileManager.swift in Sources */,
+				437D4BE61F3181B6001BA23E /* GameCollectionViewCell.swift in Sources */,
 				437D4BAD1F314B40001BA23E /* Service.swift in Sources */,
 				437D4BAF1F314B9A001BA23E /* Model.swift in Sources */,
 				437D4B7A1F3113C5001BA23E /* AppDelegate.swift in Sources */,
@@ -547,10 +651,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C434CHPZ37;
 				INFOPLIST_FILE = VivaRealChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.VivaRealChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -561,10 +667,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C434CHPZ37;
 				INFOPLIST_FILE = VivaRealChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hoffsilva.VivaRealChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

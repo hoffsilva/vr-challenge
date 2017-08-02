@@ -10,6 +10,8 @@ target 'VivaRealChallenge' do
   pod 'SwiftyJSON'
   pod 'SDWebImage', '~> 4.0'
   pod 'RealmSwift', '2.6.0'
+  pod "Hero"
+  pod 'FCAlertView'
 
   target 'VivaRealChallengeTests' do
     inherit! :search_paths

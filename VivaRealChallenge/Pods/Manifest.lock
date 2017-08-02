@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.5.0)
+  - FCAlertView (1.3.1)
+  - Hero (0.3.6)
   - Realm (2.6.0):
     - Realm/Headers (= 2.6.0)
   - Realm/Headers (2.6.0)
@@ -12,17 +14,21 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - FCAlertView
+  - Hero
   - RealmSwift (= 2.6.0)
   - SDWebImage (~> 4.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FCAlertView: 083c067bfd98f147abf5a66fe0e31cefac7bc809
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Realm: 21bab65b8a43fe9f4327b3eec4458dd69bc63e3d
   RealmSwift: ee7c93b21e115041fa03b08a89be5451b51826ae
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: d58de1d722b001e6c8f42f46b2387e216676d929
+PODFILE CHECKSUM: 4e90f7d5bd57a413f9e35b3478a26e49bfdc930f
 
 COCOAPODS: 1.2.1
