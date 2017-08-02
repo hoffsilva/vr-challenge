@@ -35,6 +35,8 @@ class GameController {
             for game in topGames {
                 let psdGame = game["game"] as! [String : Any]
                 let gm = Game()
+                gm.channels = game["channels"] as? Int
+                gm.viewers = game["viewers"] as? Int
                 gm.giantbombId = psdGame["giantbomb_id"] as? Int
                 gm.id = psdGame["_id"] as? Int
                 gm.locale = psdGame["locale"] as? String
@@ -47,6 +49,10 @@ class GameController {
             }
             self.delegate?.loadGameSuccesfuly()
         }
+    }
+    
+    func detailGame(rowOfGame: Int) {
+        GameSingleton.shared.game = getGame(rowOfGame: rowOfGame)
     }
     
     func getGame(rowOfGame: Int) -> Game {

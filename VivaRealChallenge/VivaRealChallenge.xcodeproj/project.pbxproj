@@ -50,6 +50,8 @@
 		437D4BE41F317CE5001BA23E /* mk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 437D4BCE1F317CE5001BA23E /* mk.jpg */; };
 		437D4BE61F3181B6001BA23E /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */; };
 		437D4BE81F321756001BA23E /* DetailGameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BE71F321756001BA23E /* DetailGameTableView.swift */; };
+		437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BEB1F325348001BA23E /* SwiftNotice.swift */; };
+		437D4BEE1F325C03001BA23E /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BED1F325C03001BA23E /* GameSingleton.swift */; };
 		9FDE5FC7E9BBD6A3ECBBE54D /* Pods_VivaRealChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		437D4BCE1F317CE5001BA23E /* mk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mk.jpg; sourceTree = "<group>"; };
 		437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		437D4BE71F321756001BA23E /* DetailGameTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailGameTableView.swift; sourceTree = "<group>"; };
+		437D4BEB1F325348001BA23E /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		437D4BED1F325C03001BA23E /* GameSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		58D541F65DD1CAB30B15006D /* Pods_VivaRealChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6F2E019EB4089FE5B64D /* Pods-VivaRealChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaRealChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivaRealChallenge/Pods-VivaRealChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +191,8 @@
 				437D4BA81F314595001BA23E /* RequestLinks.plist */,
 				437D4BAC1F314B40001BA23E /* Service.swift */,
 				437D4BB41F3159F1001BA23E /* FileManager.swift */,
+				437D4BEB1F325348001BA23E /* SwiftNotice.swift */,
+				437D4BED1F325C03001BA23E /* GameSingleton.swift */,
 			);
 			path = VivaRealChallenge;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 				437D4BA51F3143F9001BA23E /* Session.swift in Sources */,
 				437D4B7C1F3113C5001BA23E /* ViewController.swift in Sources */,
 				437D4BE81F321756001BA23E /* DetailGameTableView.swift in Sources */,
+				437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */,
 				437D4BB71F317517001BA23E /* GameCollectionView.swift in Sources */,
 				437D4BA31F314052001BA23E /* Connection.swift in Sources */,
 				437D4BB21F31521E001BA23E /* EnvironmentLinks.swift in Sources */,
@@ -506,6 +513,7 @@
 				437D4BAB1F314965001BA23E /* GameController.swift in Sources */,
 				437D4B9F1F31222D001BA23E /* ResponseData.swift in Sources */,
 				437D4BB51F3159F1001BA23E /* FileManager.swift in Sources */,
+				437D4BEE1F325C03001BA23E /* GameSingleton.swift in Sources */,
 				437D4BE61F3181B6001BA23E /* GameCollectionViewCell.swift in Sources */,
 				437D4BAD1F314B40001BA23E /* Service.swift in Sources */,
 				437D4BAF1F314B9A001BA23E /* Model.swift in Sources */,

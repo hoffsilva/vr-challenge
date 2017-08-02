@@ -31,6 +31,8 @@ class Game: Model {
   public var localizedName: String?
   public var locale: String?
   public var coverURL: String?
+  public var viewers: Int?
+  public var channels: Int?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.

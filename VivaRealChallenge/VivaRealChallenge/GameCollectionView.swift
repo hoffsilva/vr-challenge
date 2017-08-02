@@ -16,10 +16,15 @@ private let reuseIdentifier = "Cell"
 class GameCollectionView: UICollectionViewController {
     
     var controller = GameController()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
+        pleaseWait()
         controller.getGames(quantity: 50)
         
         collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac.jpg"))
@@ -60,8 +65,12 @@ class GameCollectionView: UICollectionViewController {
         cell.backgroundColor = UIColor.clear
     }
     
+    
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        controller.detailGame(rowOfGame: indexPath.row)
+        
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "detailGame")
         
         // the following two lines configures the animation. default is .auto
@@ -70,6 +79,7 @@ class GameCollectionView: UICollectionViewController {
         
         hero_replaceViewController(with: vc)
     }
+
     
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -106,11 +116,13 @@ extension GameCollectionView: GameDelegate {
     func showError(message: String) {
         let alert = FCAlertView()
         alert.makeAlertTypeWarning()
+        clearAllNotice()
         alert.showAlert(withTitle: "😩", withSubtitle: "Houve um erro... \(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
     }
 
     func loadGameSuccesfuly() {
         collectionView?.reloadData()
+        clearAllNotice()
     }
 
     
