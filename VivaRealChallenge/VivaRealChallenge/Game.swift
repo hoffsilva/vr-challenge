@@ -30,6 +30,7 @@ class Game: Model {
   public var giantbombId: Int?
   public var localizedName: String?
   public var locale: String?
+  public var coverURL: String?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.

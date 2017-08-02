@@ -7,18 +7,23 @@
 //
 
 import UIKit
+import SDWebImage
+import FCAlertView
+import Hero
 
 private let reuseIdentifier = "Cell"
 
 class GameCollectionView: UICollectionViewController {
+    
+    var controller = GameController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        controller.delegate = self
+        controller.getGames(quantity: 50)
+        
         collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac.jpg"))
         collectionView?.backgroundView?.alpha = 0.4
-        
-
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
 
@@ -37,13 +42,14 @@ class GameCollectionView: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 2
+        return controller.arrayOfGames.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GameCollectionViewCell
     
-        // Configure the cell
+        cell.imageViewGameThumb?.sd_setImage(with: URL(string: controller.getURL(item: indexPath.row)))
     
         return cell
     }
@@ -53,7 +59,18 @@ class GameCollectionView: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor.clear
     }
+    
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "detailGame")
+        
+        // the following two lines configures the animation. default is .auto
+        Hero.shared.setDefaultAnimationForNextTransition(HeroDefaultAnimationType.zoom)
+        Hero.shared.setContainerColorForNextTransition(.lightGray)
+        
+        hero_replaceViewController(with: vc)
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -87,7 +104,9 @@ class GameCollectionView: UICollectionViewController {
 
 extension GameCollectionView: GameDelegate {
     func showError(message: String) {
-        
+        let alert = FCAlertView()
+        alert.makeAlertTypeWarning()
+        alert.showAlert(withTitle: "😩", withSubtitle: "Houve um erro... \(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
     }
 
     func loadGameSuccesfuly() {

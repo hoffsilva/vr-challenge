@@ -25,40 +25,46 @@ class Service {
     
     static let shared = Service()
     
-    func fetch<T:Model>(_:T.Type, requestLink: RequestLinks, parameters: [String: Any]?, handlerObject: @escaping HandlerObject) {
-        
-        var url = self.requestLink(type: requestLink)
-        if let parameters = parameters {
-            url = self.linkWithParameters(link: url, parameters: parameters)
-        }
-        
-        
-        if !verifyConnection() {
-            let error = ReachabilityError.notConnection
-            handlerObject(error)
-            return
-        }
-        
-        Connection.request(url, method: .get, parameters: nil) { (dataResponse) in
-            switch dataResponse.result {
-            case .success:
-                guard let array = dataResponse.result.value as? [Any] else {
-                    handlerObject(T(json: JSON(dataResponse.result.value!)))
-                    return
-                }
-                
-                var arrayObject = [T]()
-                for object in array {
-                    arrayObject.append(T(json: JSON(object)))
-                }
-                
-                handlerObject(arrayObject)
-                
-            case .failure:
-                handlerObject(ReachabilityError.requestTimeout)
-            }
-        }
-    }
+    
+    
+     
+     func fetch(requestLink: RequestLinks, parameters: [String: Any]?, handlerObject: @escaping HandlerObject) {
+     
+     var url = self.requestLink(type: requestLink)
+     if let parameters = parameters {
+     url = self.linkWithParameters(link: url, parameters: parameters)
+     }
+     
+     
+     if !verifyConnection() {
+     let error = ReachabilityError.notConnection
+     handlerObject(error)
+     return
+     }
+     
+     Connection.request(url, method: .get, parameters: nil) { (dataResponse) in
+     switch dataResponse.result {
+     case .success:
+     guard let array = dataResponse.result.value as? [Any] else {
+     handlerObject(dataResponse.data)
+     return
+     }
+     
+     var arrayObject = [Any]()
+     for object in array {
+     arrayObject.append(json: JSON(object))
+     }
+     
+     handlerObject(arrayObject)
+     
+     case .failure:
+     handlerObject(ReachabilityError.requestTimeout)
+     }
+     }
+     }
+     
+     
+     
     
     // MARK: - Verifications -
     
