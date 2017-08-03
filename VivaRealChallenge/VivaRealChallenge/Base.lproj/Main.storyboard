@@ -317,22 +317,84 @@
             </objects>
             <point key="canvasLocation" x="3643.125" y="-246.25"/>
         </scene>
-        <!--Fvaoritos-->
+        <!--Favoritos-->
         <scene sceneID="Zvd-Sv-fzS">
             <objects>
-                <tableViewController id="fBc-Uk-ljx" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsR-En-8dZ">
+                <tableViewController id="fBc-Uk-ljx" customClass="FavoritedGameTableView" customModule="VivaRealChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="234" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsR-En-8dZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="lCy-xs-gth">
+                            <rect key="frame" x="0.0" y="262" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sem games favoritos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZT-NG-bGN">
+                                    <rect key="frame" x="77.5" y="-10" width="165.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="gZT-NG-bGN" firstAttribute="centerX" secondItem="lCy-xs-gth" secondAttribute="centerX" id="Zgy-7y-7Xz"/>
+                                <constraint firstItem="gZT-NG-bGN" firstAttribute="centerY" secondItem="lCy-xs-gth" secondAttribute="centerY" id="v9S-sC-MZO"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nhd-MW-jQQ">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="234" id="Nhd-MW-jQQ" customClass="FavoritedGameTableViewCell" customModule="VivaRealChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="234"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nhd-MW-jQQ" id="WVf-ct-cLm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="233.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r3k-0w-kC3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="233.5"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1x-le-QpC">
+                                            <rect key="frame" x="0.0" y="153" width="320" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popularity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-ft-TNN">
+                                                    <rect key="frame" x="121.5" y="51" width="77" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fk9-Kf-vxj">
+                                                    <rect key="frame" x="139" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ptI-ft-TNN" secondAttribute="bottom" constant="8" id="8Q1-ls-ZKV"/>
+                                                <constraint firstItem="Fk9-Kf-vxj" firstAttribute="top" secondItem="x1x-le-QpC" secondAttribute="top" constant="8" id="AxA-B0-EgV"/>
+                                                <constraint firstItem="Fk9-Kf-vxj" firstAttribute="centerX" secondItem="x1x-le-QpC" secondAttribute="centerX" id="DDA-wl-EfR"/>
+                                                <constraint firstItem="ptI-ft-TNN" firstAttribute="centerX" secondItem="x1x-le-QpC" secondAttribute="centerX" id="K0W-Oh-CHs"/>
+                                                <constraint firstAttribute="height" constant="80" id="gwB-9o-erY"/>
+                                                <constraint firstItem="ptI-ft-TNN" firstAttribute="centerX" secondItem="x1x-le-QpC" secondAttribute="centerX" id="nie-4a-9PK"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="x1x-le-QpC" secondAttribute="bottom" id="CeZ-jP-EwN"/>
+                                        <constraint firstAttribute="trailing" secondItem="r3k-0w-kC3" secondAttribute="trailing" id="ZbE-6T-9Z9"/>
+                                        <constraint firstItem="x1x-le-QpC" firstAttribute="leading" secondItem="WVf-ct-cLm" secondAttribute="leading" id="baS-AW-rWy"/>
+                                        <constraint firstItem="r3k-0w-kC3" firstAttribute="leading" secondItem="WVf-ct-cLm" secondAttribute="leading" id="d6d-5O-1U9"/>
+                                        <constraint firstAttribute="trailing" secondItem="x1x-le-QpC" secondAttribute="trailing" id="eec-ga-eae"/>
+                                        <constraint firstAttribute="bottom" secondItem="r3k-0w-kC3" secondAttribute="bottom" id="vIv-yB-LOf"/>
+                                        <constraint firstItem="r3k-0w-kC3" firstAttribute="top" secondItem="WVf-ct-cLm" secondAttribute="top" id="xLh-CK-HLE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageViewCoverGame" destination="r3k-0w-kC3" id="YWB-Ts-Vu5"/>
+                                    <outlet property="labelNameGame" destination="Fk9-Kf-vxj" id="aPf-uz-Kne"/>
+                                    <outlet property="labelPopularity" destination="ptI-ft-TNN" id="LQd-Xg-tnV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -340,7 +402,10 @@
                             <outlet property="delegate" destination="fBc-Uk-ljx" id="Muf-6O-zhd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fvaoritos" id="QoJ-p5-Nbq"/>
+                    <navigationItem key="navigationItem" title="Favoritos" id="QoJ-p5-Nbq"/>
+                    <connections>
+                        <outlet property="footerView" destination="lCy-xs-gth" id="boL-gi-I1N"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MK-7u-GZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

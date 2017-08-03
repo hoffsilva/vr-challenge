@@ -53,6 +53,9 @@
 		437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BEB1F325348001BA23E /* SwiftNotice.swift */; };
 		437D4BEE1F325C03001BA23E /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BED1F325C03001BA23E /* GameSingleton.swift */; };
 		437D4BF11F32A4EE001BA23E /* GameRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */; };
+		437D4BF31F33BEA0001BA23E /* FavoritedGameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BF21F33BEA0001BA23E /* FavoritedGameTableView.swift */; };
+		437D4BF51F33C257001BA23E /* FavoritedGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BF41F33C257001BA23E /* FavoritedGameTableViewCell.swift */; };
+		437D4BF71F33CDC6001BA23E /* ApagarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BF61F33CDC6001BA23E /* ApagarTableViewController.swift */; };
 		9FDE5FC7E9BBD6A3ECBBE54D /* Pods_VivaRealChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +120,9 @@
 		437D4BEB1F325348001BA23E /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		437D4BED1F325C03001BA23E /* GameSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRealmModel.swift; sourceTree = "<group>"; };
+		437D4BF21F33BEA0001BA23E /* FavoritedGameTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritedGameTableView.swift; sourceTree = "<group>"; };
+		437D4BF41F33C257001BA23E /* FavoritedGameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritedGameTableViewCell.swift; sourceTree = "<group>"; };
+		437D4BF61F33CDC6001BA23E /* ApagarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApagarTableViewController.swift; sourceTree = "<group>"; };
 		58D541F65DD1CAB30B15006D /* Pods_VivaRealChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6F2E019EB4089FE5B64D /* Pods-VivaRealChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaRealChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivaRealChallenge/Pods-VivaRealChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +239,9 @@
 				437D4BB61F317517001BA23E /* GameCollectionView.swift */,
 				437D4BE51F3181B6001BA23E /* GameCollectionViewCell.swift */,
 				437D4BE71F321756001BA23E /* DetailGameTableView.swift */,
+				437D4BF21F33BEA0001BA23E /* FavoritedGameTableView.swift */,
+				437D4BF41F33C257001BA23E /* FavoritedGameTableViewCell.swift */,
+				437D4BF61F33CDC6001BA23E /* ApagarTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -519,6 +528,7 @@
 				437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */,
 				437D4BB71F317517001BA23E /* GameCollectionView.swift in Sources */,
 				437D4BA31F314052001BA23E /* Connection.swift in Sources */,
+				437D4BF31F33BEA0001BA23E /* FavoritedGameTableView.swift in Sources */,
 				437D4BB21F31521E001BA23E /* EnvironmentLinks.swift in Sources */,
 				437D4B9E1F31222D001BA23E /* Game.swift in Sources */,
 				437D4BAB1F314965001BA23E /* GameController.swift in Sources */,
@@ -529,6 +539,8 @@
 				437D4BF11F32A4EE001BA23E /* GameRealmModel.swift in Sources */,
 				437D4BAD1F314B40001BA23E /* Service.swift in Sources */,
 				437D4BAF1F314B9A001BA23E /* Model.swift in Sources */,
+				437D4BF71F33CDC6001BA23E /* ApagarTableViewController.swift in Sources */,
+				437D4BF51F33C257001BA23E /* FavoritedGameTableViewCell.swift in Sources */,
 				437D4B7A1F3113C5001BA23E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

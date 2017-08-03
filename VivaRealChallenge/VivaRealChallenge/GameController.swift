@@ -9,6 +9,11 @@
 import Foundation
 import RealmSwift
 
+protocol FavoritedGameDelegate: class {
+    func favoritedGamesLoadedSuccessfuly()
+    func deletedSuccessfuly()
+}
+
 protocol GameFavoriteDelegate: class {
     func gameIsFavorite(answer: Bool)
 }
@@ -22,8 +27,11 @@ class GameController {
     
     weak var delegate: GameDelegate?
     weak var favoriteDelegate: GameFavoriteDelegate?
+    weak var favoritedGameDelegate: FavoritedGameDelegate?
     
     var arrayOfGames = [GameRealmModel]()
+    
+    var arrayOfFavoritedGames = [GameRealmModel]()
     
     func getGames(quantity: Int?) {
         let qty = quantity ?? 50
@@ -51,7 +59,6 @@ class GameController {
                 gm.localizedName = psdGame["localized_name"] as? String
                 let box = psdGame["box"] as! [String : Any]
                 gm.coverURL = box["large"] as? String
-                //self.arrayOfGames.append(gm)
                 
                 let realmGame = GameRealmModel()
                 realmGame.channels = gm.channels!
@@ -87,6 +94,18 @@ class GameController {
         }
     }
     
+    func getFavoritedGames() {
+        let realm = try! Realm()
+        let p1 = NSPredicate(format: "isFavorite == true")
+        let favoritedGames = realm.objects(GameRealmModel.self)
+        .filter(p1)
+        for favoritedGame in favoritedGames {
+            arrayOfFavoritedGames.append(favoritedGame)
+        }
+        self.favoritedGameDelegate?.favoritedGamesLoadedSuccessfuly()
+        
+    }
+    
     func addToFavoriteList(game: GameRealmModel) {
         let realm = try! Realm()
         try! realm.write {
@@ -97,13 +116,14 @@ class GameController {
     }
     
     func removeFromFavoriteList(game: GameRealmModel) {
-        
         let realm = try! Realm()
         try! realm.write {
            game.isFavorite = false
-           GameSingleton.shared.game = realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers, "isFavorite" : game.isFavorite], update: true)
+           realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers, "isFavorite" : game.isFavorite], update: true)
             self.favoriteDelegate?.gameIsFavorite(answer: false)
         }
+        arrayOfFavoritedGames.removeAll()
+        getFavoritedGames()
     }
     
     func detailGame(rowOfGame: Int) {
@@ -115,11 +135,37 @@ class GameController {
     }
     
     func getURL(item: Int) -> String {
-        return getGame(rowOfGame: item).coverURL ?? ""
+        return getGame(rowOfGame: item).coverURL
     }
     
     func isFavorite(item: Int) -> Bool {
         return getGame(rowOfGame: item).isFavorite
+    }
+    
+    func getFavoritedGame(rowOfGame: Int) -> GameRealmModel {
+        return arrayOfFavoritedGames[rowOfGame]
+    }
+    
+    func getFavoritedURL(item: Int) -> String {
+        return getFavoritedGame(rowOfGame: item).coverURL
+    }
+    
+    func getFavoritedName(item: Int) -> String {
+        return getFavoritedGame(rowOfGame: item).name
+    }
+    
+    func getFavoritedPopularity(item: Int) -> Int {
+        return getFavoritedGame(rowOfGame: item).popularity
+    }
+    
+    func deleteFavoritedGame(item: Int) {
+        let realm = try! Realm()
+        try! realm.write {
+            let game = getFavoritedGame(rowOfGame: item)
+            GameSingleton.shared.game = realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers, "isFavorite" : false], update: true)
+            self.favoritedGameDelegate?.deletedSuccessfuly()
+        }
+        arrayOfFavoritedGames.remove(at: item)
     }
     
 }
