@@ -20,7 +20,6 @@ class FavoritedGameTableView: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.favoritedGameDelegate = self
-        tableView.estimatedRowHeight = UITableViewAutomaticDimension
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,14 +33,17 @@ class FavoritedGameTableView: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 234
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return controller.arrayOfFavoritedGames.count
     }
+    
 
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if controller.arrayOfFavoritedGames.count == 0 {
+            footerView.isHidden = false
             return footerView
         } else {
+            footerView.isHidden = true
             return nil
         }
     }
@@ -49,9 +51,11 @@ class FavoritedGameTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if controller.arrayOfFavoritedGames.count == 0 {
             tableView.isScrollEnabled = false
+            footerView.isHidden = false
             return tableView.bounds.height
         } else {
             tableView.isScrollEnabled = true
+            footerView.isHidden = true
             return 0
         }
     }

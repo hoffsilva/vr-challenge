@@ -321,12 +321,12 @@
         <scene sceneID="Zvd-Sv-fzS">
             <objects>
                 <tableViewController id="fBc-Uk-ljx" customClass="FavoritedGameTableView" customModule="VivaRealChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="234" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsR-En-8dZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="234" sectionHeaderHeight="28" sectionFooterHeight="28" id="tsR-En-8dZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="lCy-xs-gth">
-                            <rect key="frame" x="0.0" y="262" width="320" height="1"/>
+                            <rect key="frame" x="0.0" y="262" width="320" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sem games favoritos." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZT-NG-bGN">
@@ -347,14 +347,14 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="234"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nhd-MW-jQQ" id="WVf-ct-cLm">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="233.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r3k-0w-kC3">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="233.5"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1x-le-QpC">
-                                            <rect key="frame" x="0.0" y="153" width="320" height="80"/>
+                                            <rect key="frame" x="0.0" y="154" width="320" height="80"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="popularity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptI-ft-TNN">
                                                     <rect key="frame" x="121.5" y="51" width="77" height="21"/>

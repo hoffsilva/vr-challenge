@@ -95,6 +95,7 @@ class GameController {
     }
     
     func getFavoritedGames() {
+        arrayOfFavoritedGames.removeAll()
         let realm = try! Realm()
         let p1 = NSPredicate(format: "isFavorite == true")
         let favoritedGames = realm.objects(GameRealmModel.self)
