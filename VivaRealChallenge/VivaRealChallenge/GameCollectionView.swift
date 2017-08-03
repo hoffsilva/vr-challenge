@@ -91,7 +91,7 @@ extension GameCollectionView: GameDelegate {
         alert.makeAlertTypeWarning()
         clearAllNotice()
         refreshControll.endRefreshing()
-        alert.showAlert(inView: self, withTitle: "😩", withSubtitle: "Houve um erro... \(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
+        alert.showAlert(inView: self, withTitle: "😩", withSubtitle: "\(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
     }
 
     func loadGameSuccesfuly() {
