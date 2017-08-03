@@ -29,6 +29,8 @@ class GameController {
     weak var favoriteDelegate: GameFavoriteDelegate?
     weak var favoritedGameDelegate: FavoritedGameDelegate?
     
+    var arrayOfBackgrounds = [#imageLiteral(resourceName: "ac.jpg"),#imageLiteral(resourceName: "ac2.jpg"),#imageLiteral(resourceName: "ac3.jpg"),#imageLiteral(resourceName: "battlefield.jpg"),#imageLiteral(resourceName: "bs.jpg"),#imageLiteral(resourceName: "cs.jpg"),#imageLiteral(resourceName: "ds.jpg"),#imageLiteral(resourceName: "fc.jpg"),#imageLiteral(resourceName: "gta.jpg"),#imageLiteral(resourceName: "halo.jpg"),#imageLiteral(resourceName: "halo1.jpg"),#imageLiteral(resourceName: "halob.jpg"),#imageLiteral(resourceName: "hitman.jpg"),#imageLiteral(resourceName: "metro.jpg"),#imageLiteral(resourceName: "mine.jpg"),#imageLiteral(resourceName: "mk.jpg"),#imageLiteral(resourceName: "tb.jpg"),#imageLiteral(resourceName: "tf.jpg"),#imageLiteral(resourceName: "tf2.jpg"),#imageLiteral(resourceName: "tf3.jpg"),#imageLiteral(resourceName: "ts.jpg"),#imageLiteral(resourceName: "wd.jpg")]
+    
     var arrayOfGames = [GameRealmModel]()
     
     var arrayOfFavoritedGames = [GameRealmModel]()
@@ -167,6 +169,10 @@ class GameController {
             self.favoritedGameDelegate?.deletedSuccessfuly()
         }
         arrayOfFavoritedGames.remove(at: item)
+    }
+    
+    func getBackground(item: Int) -> UIImage {
+        return arrayOfBackgrounds[item]
     }
     
 }

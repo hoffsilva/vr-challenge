@@ -27,8 +27,8 @@ class GameCollectionView: UICollectionViewController {
         controller.delegate = self
         collectionView?.alwaysBounceVertical = true
         callRefreshControll()
-        //loadGames()
-        collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac.jpg"))
+        let index = arc4random_uniform(UInt32(controller.arrayOfBackgrounds.count))
+        collectionView?.backgroundView = UIImageView(image: controller.getBackground(item: Int(index)))
         collectionView?.backgroundView?.alpha = 0.4
     }
 
