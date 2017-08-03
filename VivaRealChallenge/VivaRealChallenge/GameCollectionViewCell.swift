@@ -11,5 +11,6 @@ import UIKit
 class GameCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageViewGameThumb: UIImageView?
+    @IBOutlet weak var imageViewIsFavorite: UIImageView?
     
 }

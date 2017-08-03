@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,11 +22,11 @@
                             <size key="itemSize" width="140" height="196"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="IzO-T2-H5p" customClass="GameCollectionViewCell" customModule="VivaRealChallenge" customModuleProvider="target">
-                                <rect key="frame" x="5" y="10" width="140" height="196"/>
+                                <rect key="frame" x="5" y="5" width="140" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="196"/>
@@ -34,10 +35,19 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vrd-yt-da1">
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="196"/>
                                         </imageView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vft-GU-c6v">
+                                            <rect key="frame" x="92" y="8" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="ggu-ir-ahb"/>
+                                                <constraint firstAttribute="height" constant="40" id="t1p-3J-46M"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="Vft-GU-c6v" firstAttribute="top" secondItem="IzO-T2-H5p" secondAttribute="topMargin" id="Kpb-sg-0B1"/>
                                     <constraint firstItem="vrd-yt-da1" firstAttribute="leading" secondItem="IzO-T2-H5p" secondAttribute="leading" id="Mdo-uE-mZk"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Vft-GU-c6v" secondAttribute="trailing" id="OSM-65-Wwz"/>
                                     <constraint firstAttribute="bottom" secondItem="vrd-yt-da1" secondAttribute="bottom" id="T5H-cI-t5K"/>
                                     <constraint firstItem="vrd-yt-da1" firstAttribute="top" secondItem="IzO-T2-H5p" secondAttribute="top" id="b7z-Di-d1h"/>
                                     <constraint firstAttribute="trailing" secondItem="vrd-yt-da1" secondAttribute="trailing" id="zaZ-kL-mUF"/>
@@ -50,6 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="imageViewGameThumb" destination="vrd-yt-da1" id="beT-eo-9tc"/>
+                                    <outlet property="imageViewIsFavorite" destination="Vft-GU-c6v" id="VVQ-Jl-LE1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -255,7 +266,7 @@
                                                         <constraint firstAttribute="width" constant="200" id="7QT-KY-lMg"/>
                                                         <constraint firstAttribute="height" constant="50" id="n5p-tj-zME"/>
                                                     </constraints>
-                                                    <state key="normal" title="Adicionar aos Favoritos">
+                                                    <state key="normal">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -294,6 +305,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="buttonAddRemoveFavorite" destination="mKw-VU-M5j" id="qXu-nJ-ska"/>
                         <outlet property="imageViewcoverGame" destination="Tpf-3L-EhJ" id="WIb-fJ-2cF"/>
                         <outlet property="labelChannels" destination="sPV-4Y-giY" id="nlN-8Q-Dio"/>
                         <outlet property="labelName" destination="K1J-xd-VvO" id="DEA-wI-k3n"/>
@@ -399,6 +411,7 @@
     <resources>
         <image name="bs.jpg" width="1080" height="1920"/>
         <image name="close" width="32" height="32"/>
+        <image name="favIcon" width="32" height="32"/>
         <image name="favorite" width="28" height="28"/>
         <image name="game" width="32" height="32"/>
     </resources>

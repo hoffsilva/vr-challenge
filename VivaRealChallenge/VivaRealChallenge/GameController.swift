@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import RealmSwift
+
+protocol GameFavoriteDelegate: class {
+    func gameIsFavorite(answer: Bool)
+}
 
 protocol GameDelegate: class {
     func loadGameSuccesfuly()
@@ -16,8 +21,9 @@ protocol GameDelegate: class {
 class GameController {
     
     weak var delegate: GameDelegate?
+    weak var favoriteDelegate: GameFavoriteDelegate?
     
-    var arrayOfGames = [Game]()
+    var arrayOfGames = [GameRealmModel]()
     
     func getGames(quantity: Int?) {
         let qty = quantity ?? 50
@@ -45,9 +51,58 @@ class GameController {
                 gm.localizedName = psdGame["localized_name"] as? String
                 let box = psdGame["box"] as! [String : Any]
                 gm.coverURL = box["large"] as? String
-                self.arrayOfGames.append(gm)
+                //self.arrayOfGames.append(gm)
+                
+                let realmGame = GameRealmModel()
+                realmGame.channels = gm.channels!
+                realmGame.coverURL = gm.coverURL!
+                realmGame.giantbombId = gm.giantbombId!
+                realmGame.id = gm.id!
+                realmGame.isFavorite = false
+                realmGame.locale = gm.locale!
+                realmGame.localizedName = gm.localizedName!
+                realmGame.name = gm.name!
+                realmGame.popularity = gm.popularity!
+                realmGame.viewers = gm.viewers!
+                
+                self.saveGameOnRealm(game: realmGame)
             }
+            self.getGamesFromRealm()
             self.delegate?.loadGameSuccesfuly()
+        }
+    }
+    
+    func saveGameOnRealm(game: GameRealmModel) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers], update: true)
+        }
+    }
+    
+    func getGamesFromRealm() {
+        let realm = try! Realm()
+        let games = realm.objects(GameRealmModel.self)
+        for game in games {
+            arrayOfGames.append(game)
+        }
+    }
+    
+    func addToFavoriteList(game: GameRealmModel) {
+        let realm = try! Realm()
+        try! realm.write {
+            game.isFavorite = true
+            GameSingleton.shared.game = realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers, "isFavorite" : game.isFavorite], update: true)
+            self.favoriteDelegate?.gameIsFavorite(answer: true)
+        }
+    }
+    
+    func removeFromFavoriteList(game: GameRealmModel) {
+        
+        let realm = try! Realm()
+        try! realm.write {
+           game.isFavorite = false
+           GameSingleton.shared.game = realm.create(GameRealmModel.self, value: ["id" : game.id, "channels" : game.channels, "coverURL" : game.coverURL, "giantbombId" : game.giantbombId, "locale" : game.locale, "localizedName" : game.localizedName, "name" : game.name, "popularity" : game.popularity, "viewers": game.viewers, "isFavorite" : game.isFavorite], update: true)
+            self.favoriteDelegate?.gameIsFavorite(answer: false)
         }
     }
     
@@ -55,12 +110,16 @@ class GameController {
         GameSingleton.shared.game = getGame(rowOfGame: rowOfGame)
     }
     
-    func getGame(rowOfGame: Int) -> Game {
+    func getGame(rowOfGame: Int) -> GameRealmModel {
         return arrayOfGames[rowOfGame]
     }
     
     func getURL(item: Int) -> String {
         return getGame(rowOfGame: item).coverURL ?? ""
+    }
+    
+    func isFavorite(item: Int) -> Bool {
+        return getGame(rowOfGame: item).isFavorite
     }
     
 }

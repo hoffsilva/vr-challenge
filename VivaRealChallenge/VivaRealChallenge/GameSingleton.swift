@@ -12,10 +12,10 @@ class GameSingleton: NSObject {
     
     static let shared = GameSingleton()
     
-    var game = Game()
+    var game = GameRealmModel()
     
     func clearData() {
-        GameSingleton.shared.game = Game()
+        GameSingleton.shared.game = GameRealmModel()
     }
     
 }

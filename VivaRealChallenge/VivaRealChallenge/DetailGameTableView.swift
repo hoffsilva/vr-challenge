@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import SDWebImage
+import FCAlertView
 
 class DetailGameTableView: UITableViewController {
     
@@ -18,8 +19,10 @@ class DetailGameTableView: UITableViewController {
     @IBOutlet weak var labelPopularity: UILabel!
     @IBOutlet weak var labelViewers: UILabel!
     @IBOutlet weak var labelChannels: UILabel!
+    @IBOutlet weak var buttonAddRemoveFavorite: UIButton!
     
     var indexOfSelectedGame: Int!
+    var controller = GameController()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +31,7 @@ class DetailGameTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        controller.favoriteDelegate = self
         loadDataGame()
     }
 
@@ -46,13 +50,18 @@ class DetailGameTableView: UITableViewController {
     }
     
     func loadDataGame() {
-        imageViewcoverGame.sd_setImage(with: URL(string: GameSingleton.shared.game.coverURL!))
+        imageViewcoverGame.sd_setImage(with: URL(string: GameSingleton.shared.game.coverURL))
         tableView.backgroundView = UIImageView(image: imageViewcoverGame.image)
         tableView.backgroundView?.alpha = 0.2
-        labelName.text = GameSingleton.shared.game.name!
-        labelPopularity.text = "\(GameSingleton.shared.game.popularity!)"
-        labelViewers.text = "\(GameSingleton.shared.game.viewers!)"
-        labelChannels.text = "\(GameSingleton.shared.game.channels!)"
+        labelName.text = GameSingleton.shared.game.name
+        labelPopularity.text = "\(GameSingleton.shared.game.popularity)"
+        labelViewers.text = "\(GameSingleton.shared.game.viewers)"
+        labelChannels.text = "\(GameSingleton.shared.game.channels)"
+        if GameSingleton.shared.game.isFavorite {
+            buttonAddRemoveFavorite.setTitle("Desmarcar dos favoritos", for: .normal)
+        } else {
+            buttonAddRemoveFavorite.setTitle( "Marcar como favorito", for: .normal)
+        }
     }
     
     
@@ -63,7 +72,24 @@ class DetailGameTableView: UITableViewController {
         hero_replaceViewController(with: vc)
     }
     @IBAction func addToFavoritesButton(_ sender: Any) {
-        
+        if GameSingleton.shared.game.isFavorite {
+            controller.removeFromFavoriteList(game: GameSingleton.shared.game)
+        } else {
+            controller.addToFavoriteList(game: GameSingleton.shared.game)
+        }
     }
 
+}
+
+extension DetailGameTableView: GameFavoriteDelegate {
+    func gameIsFavorite(answer: Bool) {
+        let alert = FCAlertView()
+        alert.makeAlertTypeSuccess()
+        if answer {
+            alert.showAlert(withTitle: "🎉🎉🎉🎉", withSubtitle: "\(String(describing: labelName.text!)) agora é um favorito.", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
+        } else {
+             alert.showAlert(withTitle: "😩😩😩😩", withSubtitle: "\(String(describing: labelName.text!)) não é mais um favorito.", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
+        }
+        loadDataGame()
+    }
 }

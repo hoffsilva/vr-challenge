@@ -52,6 +52,7 @@
 		437D4BE81F321756001BA23E /* DetailGameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BE71F321756001BA23E /* DetailGameTableView.swift */; };
 		437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BEB1F325348001BA23E /* SwiftNotice.swift */; };
 		437D4BEE1F325C03001BA23E /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BED1F325C03001BA23E /* GameSingleton.swift */; };
+		437D4BF11F32A4EE001BA23E /* GameRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */; };
 		9FDE5FC7E9BBD6A3ECBBE54D /* Pods_VivaRealChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +116,7 @@
 		437D4BE71F321756001BA23E /* DetailGameTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailGameTableView.swift; sourceTree = "<group>"; };
 		437D4BEB1F325348001BA23E /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		437D4BED1F325C03001BA23E /* GameSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
+		437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameRealmModel.swift; sourceTree = "<group>"; };
 		58D541F65DD1CAB30B15006D /* Pods_VivaRealChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		658A6F2E019EB4089FE5B64D /* Pods-VivaRealChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaRealChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivaRealChallenge/Pods-VivaRealChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		8FCC817E703AFA902F396112 /* Pods_VivaRealChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivaRealChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +211,7 @@
 		437D4B991F3118EC001BA23E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				437D4BEF1F32A4AA001BA23E /* Realm */,
 				437D4B9C1F31222D001BA23E /* Game.swift */,
 				437D4B9D1F31222D001BA23E /* ResponseData.swift */,
 				437D4BAE1F314B9A001BA23E /* Model.swift */,
@@ -261,6 +264,14 @@
 				437D4BCE1F317CE5001BA23E /* mk.jpg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		437D4BEF1F32A4AA001BA23E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */,
+			);
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		BA67D6A659159F3E6A68C0B1 /* Pods */ = {
@@ -515,6 +526,7 @@
 				437D4BB51F3159F1001BA23E /* FileManager.swift in Sources */,
 				437D4BEE1F325C03001BA23E /* GameSingleton.swift in Sources */,
 				437D4BE61F3181B6001BA23E /* GameCollectionViewCell.swift in Sources */,
+				437D4BF11F32A4EE001BA23E /* GameRealmModel.swift in Sources */,
 				437D4BAD1F314B40001BA23E /* Service.swift in Sources */,
 				437D4BAF1F314B9A001BA23E /* Model.swift in Sources */,
 				437D4B7A1F3113C5001BA23E /* AppDelegate.swift in Sources */,

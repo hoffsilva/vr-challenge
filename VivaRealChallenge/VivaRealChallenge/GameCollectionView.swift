@@ -16,6 +16,7 @@ private let reuseIdentifier = "Cell"
 class GameCollectionView: UICollectionViewController {
     
     var controller = GameController()
+    let refreshControll = UIRefreshControl()
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
@@ -24,12 +25,16 @@ class GameCollectionView: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         controller.delegate = self
-        pleaseWait()
-        controller.getGames(quantity: 50)
+        collectionView?.alwaysBounceVertical = true
+        callRefreshControll()
+        //loadGames()
         collectionView?.backgroundView = UIImageView(image: #imageLiteral(resourceName: "ac.jpg"))
         collectionView?.backgroundView?.alpha = 0.4
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        loadGames()
+    }
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -42,11 +47,13 @@ class GameCollectionView: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GameCollectionViewCell
-    
         cell.imageViewGameThumb?.sd_setImage(with: URL(string: controller.getURL(item: indexPath.row)))
-    
+        if controller.isFavorite(item: indexPath.row) {
+            cell.imageViewIsFavorite?.isHidden = false
+        } else {
+           cell.imageViewIsFavorite?.isHidden = true
+        }
         return cell
     }
 
@@ -63,6 +70,18 @@ class GameCollectionView: UICollectionViewController {
         Hero.shared.setContainerColorForNextTransition(.lightGray)
         hero_replaceViewController(with: vc)
     }
+    
+    func callRefreshControll() {
+        refreshControll.tintColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
+        refreshControll.addTarget(self, action: #selector(loadGames), for: .valueChanged)
+        collectionView?.addSubview(refreshControll)
+        collectionView?.alwaysBounceVertical = true
+    }
+    
+    func loadGames() {
+        pleaseWait()
+        controller.getGames(quantity: 50)
+    }
 
 }
 
@@ -71,13 +90,13 @@ extension GameCollectionView: GameDelegate {
         let alert = FCAlertView()
         alert.makeAlertTypeWarning()
         clearAllNotice()
-        alert.showAlert(withTitle: "😩", withSubtitle: "Houve um erro... \(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
+        refreshControll.endRefreshing()
+        alert.showAlert(inView: self, withTitle: "😩", withSubtitle: "Houve um erro... \(message)", withCustomImage: nil, withDoneButtonTitle: "Ok", andButtons: nil)
     }
 
     func loadGameSuccesfuly() {
         collectionView?.reloadData()
+        refreshControll.endRefreshing()
         clearAllNotice()
     }
-
-    
 }
