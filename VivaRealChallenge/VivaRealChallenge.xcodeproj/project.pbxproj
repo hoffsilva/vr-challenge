@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		302AC3F1EFB0BDE553CB30CC /* Pods_VivaRealChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D541F65DD1CAB30B15006D /* Pods_VivaRealChallenge.framework */; };
 		437D4B7A1F3113C5001BA23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4B791F3113C5001BA23E /* AppDelegate.swift */; };
-		437D4B7C1F3113C5001BA23E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D4B7B1F3113C5001BA23E /* ViewController.swift */; };
 		437D4B7F1F3113C5001BA23E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437D4B7D1F3113C5001BA23E /* Main.storyboard */; };
 		437D4B811F3113C5001BA23E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437D4B801F3113C5001BA23E /* Assets.xcassets */; };
 		437D4B841F3113C5001BA23E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437D4B821F3113C5001BA23E /* LaunchScreen.storyboard */; };
@@ -73,7 +72,6 @@
 		18A14BB8E8D006757D3BEEE8 /* Pods-VivaRealChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivaRealChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivaRealChallengeTests/Pods-VivaRealChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		437D4B761F3113C5001BA23E /* VivaRealChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivaRealChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		437D4B791F3113C5001BA23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		437D4B7B1F3113C5001BA23E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		437D4B7E1F3113C5001BA23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		437D4B801F3113C5001BA23E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		437D4B831F3113C5001BA23E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -182,25 +180,15 @@
 		437D4B781F3113C5001BA23E /* VivaRealChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				43FFC2211F34089A005025D8 /* Utils */,
+				43FFC2201F340881005025D8 /* Network */,
 				437D4BB81F317BC7001BA23E /* images */,
 				437D4B9B1F311906001BA23E /* View */,
 				437D4B9A1F3118FB001BA23E /* Controller */,
 				437D4B991F3118EC001BA23E /* Model */,
-				437D4B791F3113C5001BA23E /* AppDelegate.swift */,
-				437D4B7B1F3113C5001BA23E /* ViewController.swift */,
 				437D4B7D1F3113C5001BA23E /* Main.storyboard */,
 				437D4B801F3113C5001BA23E /* Assets.xcassets */,
 				437D4B821F3113C5001BA23E /* LaunchScreen.storyboard */,
-				437D4B851F3113C5001BA23E /* Info.plist */,
-				437D4BA21F314052001BA23E /* Connection.swift */,
-				437D4BB01F31521E001BA23E /* EnvironmentLinks.swift */,
-				437D4BB11F31521E001BA23E /* EnvironmentLinks.plist */,
-				437D4BA41F3143F9001BA23E /* Session.swift */,
-				437D4BA81F314595001BA23E /* RequestLinks.plist */,
-				437D4BAC1F314B40001BA23E /* Service.swift */,
-				437D4BB41F3159F1001BA23E /* FileManager.swift */,
-				437D4BEB1F325348001BA23E /* SwiftNotice.swift */,
-				437D4BED1F325C03001BA23E /* GameSingleton.swift */,
 			);
 			path = VivaRealChallenge;
 			sourceTree = "<group>";
@@ -281,6 +269,31 @@
 				437D4BF01F32A4EE001BA23E /* GameRealmModel.swift */,
 			);
 			name = Realm;
+			sourceTree = "<group>";
+		};
+		43FFC2201F340881005025D8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				437D4BA21F314052001BA23E /* Connection.swift */,
+				437D4BB01F31521E001BA23E /* EnvironmentLinks.swift */,
+				437D4BB11F31521E001BA23E /* EnvironmentLinks.plist */,
+				437D4BA41F3143F9001BA23E /* Session.swift */,
+				437D4BA81F314595001BA23E /* RequestLinks.plist */,
+				437D4BAC1F314B40001BA23E /* Service.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		43FFC2211F34089A005025D8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				437D4B791F3113C5001BA23E /* AppDelegate.swift */,
+				437D4B851F3113C5001BA23E /* Info.plist */,
+				437D4BB41F3159F1001BA23E /* FileManager.swift */,
+				437D4BEB1F325348001BA23E /* SwiftNotice.swift */,
+				437D4BED1F325C03001BA23E /* GameSingleton.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		BA67D6A659159F3E6A68C0B1 /* Pods */ = {
@@ -523,7 +536,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				437D4BA51F3143F9001BA23E /* Session.swift in Sources */,
-				437D4B7C1F3113C5001BA23E /* ViewController.swift in Sources */,
 				437D4BE81F321756001BA23E /* DetailGameTableView.swift in Sources */,
 				437D4BEC1F325348001BA23E /* SwiftNotice.swift in Sources */,
 				437D4BB71F317517001BA23E /* GameCollectionView.swift in Sources */,
