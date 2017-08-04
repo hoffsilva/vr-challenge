@@ -429,13 +429,13 @@
             </objects>
             <point key="canvasLocation" x="898" y="113"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Top 50-->
         <scene sceneID="ASm-PC-91d">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSr-9L-0gk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FdQ-qA-GQX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="game" selectedImage="game" id="Qxh-Oo-qYt">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="12"/>
+                    <tabBarItem key="tabBarItem" title="Top 50" image="game" selectedImage="game" id="Qxh-Oo-qYt">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ieH-2w-VpR">
@@ -453,11 +453,13 @@
             </objects>
             <point key="canvasLocation" x="1912.5" y="-245"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritos-->
         <scene sceneID="CJe-68-tAA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="36z-Pl-AQb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="favorite" id="J8d-95-bDm"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="favorite" id="J8d-95-bDm">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="upd-Ek-2aY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
