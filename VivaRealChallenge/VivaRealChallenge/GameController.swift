@@ -40,12 +40,16 @@ class GameController {
         Service.shared.fetch(requestLink: .getGame, parameters: ["quantity" : qty]) { (response) in
             if let error = Service.verifyResult(response) {
                 self.delegate?.showError(message: error.description)
+                self.getGamesFromRealm()
+                self.delegate?.loadGameSuccesfuly()
                 return
             }
             let parsedResponse = (try! JSONSerialization.jsonObject(with: response as! Data, options: JSONSerialization.ReadingOptions.allowFragments)) as! NSDictionary
             
             guard let topGames = parsedResponse.value(forKey: "top") as?  [[String : Any]] else {
-                self.delegate?.showError(message: "Não foi possível carregar os dados...")
+                self.delegate?.showError(message: "Não foi possível carregar os dados do twitch")
+                self.getGamesFromRealm()
+                self.delegate?.loadGameSuccesfuly()
                 return
             }
             for game in topGames {
