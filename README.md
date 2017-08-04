@@ -37,5 +37,10 @@ Aplicativo para estudo e prova de conhecimento em desenvolvimento iOS.
 
 * [FCAlertView] (https://github.com/krispenney/FCAlertView) alertview customizável para iOS.
 
+### SwiftNotice
+
+* [SwiftNotice] (https://github.com/johnlui/SwiftNotice) library for displaying various popups.
+
+
 
 
